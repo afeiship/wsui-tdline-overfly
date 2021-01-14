@@ -17,6 +17,8 @@ npm i @jswork/wsui-tdline-overfly
 @import '~@jswork/wsui-tdline-overfly/dist/index.scss';
 // use css
 @import '~@jswork/wsui-tdline-overfly/dist/style.css';
+
+// <a href="#" class="wsui-tdline-overfly">道可道，非常道；名可名，非常名。</a>
 ```
 
 ## license
