@@ -1,0 +1,45 @@
+/*!
+ * name: @jswork/wsui-tdline-overfly
+ * description: Text decoration line overfly effect.
+ * homepage: https://github.com/afeiship/wsui-tdline-overfly
+ * version: 1.0.0
+ * date: 2021-01-14 16:57:14
+ * license: MIT
+ */
+
+/*wsui-tdline-overfly Start*/
+$wsui-tdline-overfly-options: (
+  bottom: -3px,
+  height: 2px,
+  opacity: 0.8,
+);
+// @thanks to: http://mathquill.com/
+.wsui-tdline-overfly {
+  $bottom: map-get($map: $wsui-tdline-overfly-options, $key: bottom );
+  $height: map-get($map: $wsui-tdline-overfly-options, $key: height );
+  $opacity: map-get($map: $wsui-tdline-overfly-options, $key: opacity );
+
+  position: relative;
+  text-decoration: none;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: $height;
+    background-color: transparent;
+    background-color: currentColor;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover {
+    &:before {
+      opacity: $opacity;
+      bottom: $bottom;
+    }
+  }
+}
+/*wsui-tdline-overfly End*/
